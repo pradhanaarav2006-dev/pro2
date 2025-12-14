@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel-Dex</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="landing-page">
+    <header class="hero landing-hero">
+        <div class="hero-content">
+            <h1 class="glitch-text" data-text="MARVEL-DEX">MARVEL-DEX</h1>
+            <p>Access the Archives. Infinite Power Awaits.</p>
+        </div>
+    </header>
+
+    <main class="container landing-container">
+        <div class="category-card hero-category" onclick="window.location.href='heroes.html'">
+            <div class="category-content">
+                <h2>SUPERHEROES</h2>
+                <p>Earth's Mightiest Defenders</p>
+                <span class="access-btn">ACCESS DATABASE &rarr;</span>
+            </div>
+            <div class="category-bg" style="background-image: url('assets/cap_movie.png');"></div>
+        </div>
+
+        <div class="category-card villain-category"
+            onclick="alert('ACCESS DENIED // CLEARANCE LEVEL TOO LOW\n\n(Coming Soon)')">
+            <div class="category-content">
+                <h2>SUPERVILLAINS</h2>
+                <p>The Ultimate Threats</p>
+                <span class="access-btn">RESTRICTED AREA &rarr;</span>
+            </div>
+            <div class="category-bg"
+                style="background-image: url('https://images.unsplash.com/photo-1608889476561-6242cfdbf622?q=80&w=2070&auto=format&fit=crop'); filter: grayscale(100%);">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simple landing page script if needed, mostly handled by CSS and inline JS
+    </script>
+</body>
+
+</html>

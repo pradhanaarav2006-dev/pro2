@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Database | Loading...</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@500;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="database-view">
+    <nav class="top-nav">
+        <a href="index.html" class="back-link">&larr; BACK TO GRID</a>
+        <div class="system-status">SYSTEM: ONLINE</div>
+    </nav>
+
+    <main class="db-container">
+        <div class="db-header">
+            <h1 id="char-name">LOADING...</h1>
+            <div class="classified-stamp">TOP SECRET</div>
+        </div>
+
+        <div class="db-content">
+            <div class="db-image-section">
+                <div class="image-frame">
+                    <img id="char-image" src="" alt="" class="glitch-img">
+                    <div class="scan-line"></div>
+                </div>
+                <div class="file-meta">
+                    <p>FILE ID: <span id="char-id">UNKNOWN</span></p>
+                    <p>STATUS: ACTIVE</p>
+                </div>
+            </div>
+
+            <div class="db-data-section">
+                <div class="data-block">
+                    <h2>BIODATA</h2>
+                    <p id="char-bio">Retrieving data...</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>REAL NAME</h3>
+                        <p id="char-realname">---</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>FIRST MOVIE</h3>
+                        <p id="char-movie">---</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>FIRST COMIC</h3>
+                        <p id="char-comic">---</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
