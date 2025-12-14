@@ -138,59 +138,67 @@ const characters = [
         firstComic: 'Avengers #181 (1979)',
         image: 'assets/antman.webp',
         movieImage: 'assets/ant-man-movie.webp'
-    }
     },
-{
-    id: 'thanos',
+    {
+        id: 'thanos',
         name: 'Thanos',
-            realName: 'Thanos',
-                bio: 'The Mad Titan. Obsessed with bringing balance to the universe by wiping out half of all life.',
-                    firstMovie: 'The Avengers (2012) (Cameo)',
-                        firstComic: 'The Invincible Iron Man #55 (1973)',
-                            image: 'https://placehold.co/400x600/3e275e/white?text=Thanos',
-                                movieImage: 'https://placehold.co/800x400/3e275e/white?text=Thanos+Movie'
-},
-{
-    id: 'ultron',
+        realName: 'Thanos',
+        bio: 'The Mad Titan. Obsessed with bringing balance to the universe by wiping out half of all life.',
+        firstMovie: 'The Avengers (2012) (Cameo)',
+        firstComic: 'The Invincible Iron Man #55 (1973)',
+        image: 'https://upload.wikimedia.org/wikipedia/en/c/cd/Thanos_Infinity_4.png',
+        movieImage: 'https://upload.wikimedia.org/wikipedia/en/4/4e/Thanos_%28Josh_Brolin%29_-_Infinity_War_-_Concept_Art.jpg'
+    },
+    {
+        id: 'ultron',
         name: 'Ultron',
-            realName: 'Ultron',
-                bio: 'A sentient AI created to protect the world, who decided the only path to peace was humanity\'s extinction.',
-                    firstMovie: 'Avengers: Age of Ultron (2015)',
-                        firstComic: 'Avengers #54 (1968)',
-                            image: 'https://placehold.co/400x600/606060/red?text=Ultron',
-                                movieImage: 'https://placehold.co/800x400/606060/red?text=Ultron+Movie'
-},
-{
-    id: 'loki',
+        realName: 'Ultron',
+        bio: 'A sentient AI created to protect the world, who decided the only path to peace was humanity\'s extinction.',
+        firstMovie: 'Avengers: Age of Ultron (2015)',
+        firstComic: 'Avengers #54 (1968)',
+        image: 'https://upload.wikimedia.org/wikipedia/en/e/ed/Ultron-5.jpg',
+        movieImage: 'https://upload.wikimedia.org/wikipedia/en/1/1a/Ultron_movie_promo_art.jpg'
+    },
+    {
+        id: 'loki',
         name: 'Loki',
-            realName: 'Loki Laufeyson',
-                bio: 'The God of Mischief. Thor\'s adopted brother, a master of magic and deception.',
-                    firstMovie: 'Thor (2011)',
-                        firstComic: 'Journey into Mystery #85 (1962)',
-                            image: 'https://placehold.co/400x600/1a472a/gold?text=Loki',
-                                movieImage: 'https://placehold.co/800x400/1a472a/gold?text=Loki+Movie'
-},
-{
-    id: 'hela',
+        realName: 'Loki Laufeyson',
+        bio: 'The God of Mischief. Thor\'s adopted brother, a master of magic and deception.',
+        firstMovie: 'Thor (2011)',
+        firstComic: 'Journey into Mystery #85 (1962)',
+        image: 'https://upload.wikimedia.org/wikipedia/en/4/45/Loki_Laufeyson.png',
+        movieImage: 'https://upload.wikimedia.org/wikipedia/en/c/c8/Loki_Season_2_Series_Poster.jpg'
+    },
+    {
+        id: 'hela',
         name: 'Hela',
-            realName: 'Hela Odinsdottir',
-                bio: 'The Goddess of Death. Thor\'s older sister, seeking to reclaim Asgard and conquer the realms.',
-                    firstMovie: 'Thor: Ragnarok (2017)',
-                        firstComic: 'Journey into Mystery #102 (1964)',
-                            image: 'https://placehold.co/400x600/000000/39ff14?text=Hela',
-                                movieImage: 'https://placehold.co/800x400/000000/39ff14?text=Hela+Movie'
-}
+        realName: 'Hela Odinsdottir',
+        bio: 'The Goddess of Death. Thor\'s older sister, seeking to reclaim Asgard and conquer the realms.',
+        firstMovie: 'Thor: Ragnarok (2017)',
+        firstComic: 'Journey into Mystery #102 (1964)',
+        image: 'https://upload.wikimedia.org/wikipedia/en/1/15/Hela_Marvel_Comics.png',
+        movieImage: 'https://upload.wikimedia.org/wikipedia/en/9/91/Hela_Thor_Ragnarok.jpg'
+    }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname;
     const isDetailsPage = path.includes('character.html');
     const isHeroesPage = path.includes('heroes.html');
+    const isVillainsPage = path.includes('villains.html');
 
     if (isDetailsPage) {
         loadDetailsPage(characters);
     } else if (isHeroesPage) {
-        loadGridPage(characters);
+        // Filter for heroes
+        const villains = ['thanos', 'ultron', 'loki', 'hela'];
+        const heroesOnly = characters.filter(c => !villains.includes(c.id));
+        loadGridPage(heroesOnly);
+    } else if (isVillainsPage) {
+        // Filter for villains
+        const villains = ['thanos', 'ultron', 'loki', 'hela'];
+        const villainsOnly = characters.filter(c => villains.includes(c.id));
+        loadGridPage(villainsOnly);
     }
     // Landing page (index.html) does not require JS rendering
 });
