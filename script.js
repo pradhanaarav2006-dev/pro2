@@ -146,8 +146,8 @@ const characters = [
         bio: 'The Mad Titan. Obsessed with bringing balance to the universe by wiping out half of all life.',
         firstMovie: 'The Avengers (2012) (Cameo)',
         firstComic: 'The Invincible Iron Man #55 (1973)',
-        image: 'https://upload.wikimedia.org/wikipedia/en/c/cd/Thanos_Infinity_4.png',
-        movieImage: 'https://upload.wikimedia.org/wikipedia/en/4/4e/Thanos_%28Josh_Brolin%29_-_Infinity_War_-_Concept_Art.jpg'
+        image: 'assets/thanos.png',
+        movieImage: 'assets/thanos_movie.png'
     },
     {
         id: 'ultron',
@@ -156,8 +156,8 @@ const characters = [
         bio: 'A sentient AI created to protect the world, who decided the only path to peace was humanity\'s extinction.',
         firstMovie: 'Avengers: Age of Ultron (2015)',
         firstComic: 'Avengers #54 (1968)',
-        image: 'https://upload.wikimedia.org/wikipedia/en/e/ed/Ultron-5.jpg',
-        movieImage: 'https://upload.wikimedia.org/wikipedia/en/1/1a/Ultron_movie_promo_art.jpg'
+        image: 'assets/ultron.png',
+        movieImage: 'assets/ultron_movie.png'
     },
     {
         id: 'loki',
@@ -166,8 +166,8 @@ const characters = [
         bio: 'The God of Mischief. Thor\'s adopted brother, a master of magic and deception.',
         firstMovie: 'Thor (2011)',
         firstComic: 'Journey into Mystery #85 (1962)',
-        image: 'https://upload.wikimedia.org/wikipedia/en/4/45/Loki_Laufeyson.png',
-        movieImage: 'https://upload.wikimedia.org/wikipedia/en/c/c8/Loki_Season_2_Series_Poster.jpg'
+        image: 'assets/loki.png',
+        movieImage: 'assets/loki_movie.png'
     },
     {
         id: 'hela',
@@ -176,8 +176,8 @@ const characters = [
         bio: 'The Goddess of Death. Thor\'s older sister, seeking to reclaim Asgard and conquer the realms.',
         firstMovie: 'Thor: Ragnarok (2017)',
         firstComic: 'Journey into Mystery #102 (1964)',
-        image: 'https://upload.wikimedia.org/wikipedia/en/1/15/Hela_Marvel_Comics.png',
-        movieImage: 'https://upload.wikimedia.org/wikipedia/en/9/91/Hela_Thor_Ragnarok.jpg'
+        image: 'assets/hela.png',
+        movieImage: 'assets/hela_movie.png'
     }
 ];
 
